@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+  background-color: #404040;
+}
+
+h1,
+h2 {
+  color: #d8d8d8;
+  font-family: Lobster, Monospace;
+}
+
+h4 {
+  font-family: Lobster, Monospace;
+}
+
+.choice {
+  width: 50%;
+}
+
+.choice-group {
+  width: 200px;
+}
+
+.board {
+  position: relative;
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  background-color: #101040;
+  border-radius: 20px;
+  display: none;
+}
+
+.btn-row {
+  height: 33%;
+  width: 100%;
+}
+
+.btn-board {
+  padding: 0;
+  height: 100%;
+  width: 33%;
+  background-color: #101040;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0px;
+  font-size: 72px;
+  color: #d8d8d8;
+}
+
+.btn:hover {
+  color: #d8d8d8;
+}
+
+.top-left,
+.top,
+.top-right {
+  border-top-width: 0px;
+}
+
+.top-left,
+.left,
+.bottom-left {
+  border-left-width: 0px;
+}
+
+.top-right,
+.right,
+.bottom-right {
+  border-right-width: 0px;
+}
+
+.bottom-left,
+.bottom,
+.bottom-right {
+  border-bottom-width: 0px;
+}
+
+.buttons {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tie {
+  display: none;
+}
+
+.lose {
+  display: none;
+}

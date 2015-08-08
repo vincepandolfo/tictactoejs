@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+
+    <title>Tic Tac Toe</title>
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='base.css'>
+    
+  </head>
+
+  <body>
+
+    <h1 class="text-center">TicTacToe<br>
+	  <small>FreeCodeCamp Zipline</small></h1>
+
+	<div class="container choice-group center-block">
+	  <h2 class="text-center">Choose</h2>
+	  <div class="btn-group btn-group-lg center-block" role="group">
+	    <button type="button" class="btn btn-default choice">X</button>
+	    <button type="button" class="btn btn-default choice">O</button>
+	  </div>
+	</div>
+
+	<div class="container board">
+	  <div class="buttons">
+	    <div class="btn-row btn-group" role="group">
+	      <div type="button" class="btn btn-board top-left" id="0"></div>
+	      <div type="button" class="btn btn-board top" id="1"></div>
+	      <div type="button" class="btn btn-board top-right" id="2"></div>
+	    </div>
+
+	    <div class="btn-row btn-group" role="group">
+	      <div type="button" class="btn btn-board left" id="3"></div>
+	      <div type="button" class="btn btn-board" id="4"></div>
+	      <div type="button" class="btn btn-board right" id="5"></div>
+	    </div>
+
+	    <div class="btn-row btn-group" role="group">
+	      <div type="button" class="btn btn-board bottom-left" id="6"></div>
+	      <div type="button" class="btn btn-board bottom" id="7"></div>
+	      <div type="button" class="btn btn-board bottom-right" id="8"></div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container text-center tie">
+	  <h2>It's a tie!</h2>
+	  <button class="btn btn-default replay"><h4>Replay</h4></button>
+	</div>
+
+	<div class="container text-center lose">
+	  <h2>You lost!</h2>
+	  <button class="btn btn-default replay"><h4>Replay</h4></button>
+	</div>
+    
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='tictactoe.js'></script>
+	<script src='base.js'></script>
+
+  </body>
+</html>
+ 

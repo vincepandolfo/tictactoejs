@@ -45,6 +45,6 @@ $(document).ready(function () {
   $('.replay').click(function () {
     $(this).parent().fadeOut(500, function () {
       $('.choice-group').fadeIn(500);
-    })
-  })
+    });
+  });
 });

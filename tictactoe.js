@@ -34,7 +34,7 @@ function TicTacToe(player) {
       return false;
     
     return true;
-  }
+  };
   
   // executes the player move. Returns tree if successful, else false
   this.setPlayerAction = function(cell) {
@@ -43,7 +43,7 @@ function TicTacToe(player) {
     
     this.state[this.player] |= (1 << cell);
     return true;
-  }
+  };
 
   // executes the MiniMax algorithm to find the AI next move
   this.getAgentAction = function() {
@@ -60,19 +60,25 @@ function TicTacToe(player) {
     var winner = game.whoIsWinning(state);
     
     // if someone is winning, or the board is full, return.
-    if (winner === -1 || winner === 1 || state.X + state.O === fullBoard)
-      return memo[who][state.X][state.O] = { action: null, value: winner };
+    if (winner === -1 || winner === 1 || state.X + state.O === fullBoard) {
+      memo[who][state.X][state.O] = { action: null, value: winner };
+      return memo[who][state.X][state.O];
+    }
     
-    if (who === game.agent) // calls the max function 
-      return memo[who][state.X][state.O] = max(state);
-    else // calls the mini function
-      return memo[who][state.X][state.O] = mini(state);
+    if (who === game.agent) { // calls the max function 
+      memo[who][state.X][state.O] = max(state);
+      return memo[who][state.X][state.O];
+    }
+    else { // calls the mini function
+      memo[who][state.X][state.O] = mini(state);
+      return memo[who][state.X][state.O];
+    }
   };
   
   // returns true if the board is full
   this.isFull = function () {
     return this.state.X + this.state.O === fullBoard;
-  }
+  };
 
   var cases = [
     parseInt('111000000', 2), // top row

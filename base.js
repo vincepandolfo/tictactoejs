@@ -27,17 +27,26 @@ $(document).ready(function () {
         $('.board').fadeOut(500, function () {
           $('.tie').fadeIn(500);
         });
-      } else {
-        $('#' + game.getAgentAction()).html(game.agent);
-        if(game.whoIsWinning()) { // check if the AI has won
-          $('.board').fadeOut(500, function () {
+
+        return;
+      } 
+
+      $('#' + game.getAgentAction()).html(game.agent);
+
+      if(game.whoIsWinning() === 1) { // check if the AI won
+        $('.board').fadeOut(500, function() {
             $('.lose').fadeIn(500);
-          });          
-        } else if(game.isFull()) {
-          $('.board').fadeOut(500, function () {
-            $('.tie').fadeIn(500);
-          });
-        }
+        });
+
+        return;
+      }
+
+      if(game.isFull()) { // check again for full board
+        $('.board').fadeOut(500, function () {
+          $('.tie').fadeIn(500);
+        });
+
+        return;
       }
     }
   });

@@ -106,7 +106,7 @@ function TicTacToe(player) {
         return 0;
     };
 
-    max = function(state) {
+    var max = function(state) {
         var best = {
             action: null,
             value: -1
@@ -129,7 +129,7 @@ function TicTacToe(player) {
         return best;
     };
 
-    mini = function(state) {
+    var mini = function(state) {
         var best = {
             action: null,
             value: 1
